@@ -13,7 +13,8 @@
 <p>個人網站:</p>
 <p>其他資訊:</p>
 <p style="padding-left: 30px;"><a href="/downloads/cd2023_pj3ag4_zmq_football_4.7.7z">cd2023_pj3ag4_zmq_football_4.7.7z</a></p>
-<p style="padding-left: 30px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p><h1>Attendance</h1>
+<p style="padding-left: 30px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p>
+<h1>Attendance</h1>
 <p>出席 (10%) - 自行舉證評分</p>
 <p>自行利用 Github commits 提交記錄評分.</p>
 <h1>HW 1</h1>
@@ -57,8 +58,74 @@
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <p>w7</p>
-<p></p><h3>w7</h3>
-<h1>HW 4</h1>
+<p></p>
+<h3>w7</h3>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_pyramid(height):
+    for i in range(height):
+        # 計算空格和星號的數量
+        spaces = ' ' * (height - i - 1)
+        stars = '*' * (2 * i + 1)
+        print(spaces + stars)
+
+# 設定金字塔的高度
+pyramid_height = 6
+print_pyramid(pyramid_height)</pre>
+<p><br/>&gt;pythonw -u "help_range.py"<br/>          *<br/>        ***<br/>      *****<br/>    *******<br/>  *********<br/>***********<br/>&gt;Exit code: 0</p>
+<h3>w8</h3>
+<p><img alt="" height="471" src="/images/螢幕擷取畫面 2024-10-16 120825.png" width="800"/></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from coppeliasim_zmqremoteapi_client import RemoteAPIClient
+import time
+import keyboard
+
+# 利用 zmqRemoteAPI 以 23000 對場景伺服器進行連線
+client = RemoteAPIClient('[::1]', 23000)
+# 以 getObject 方法取得場景物件
+sim = client.getObject('sim')
+box = sim.getObject('/box')
+
+# 啟動模擬
+sim.startSimulation()
+
+# 設定立方體的尺寸和初始位置
+cube_size = 0.2  # 20 cm
+start_x = 0
+start_y = 0
+spacing = 0.5  # 50 cm 之間的距離（可根據需求調整）
+
+# 擺放立方體的行數和每行的數量
+rows = 5  # 從第 1 行到第 5 行
+cubes_in_row = [1, 3, 5, 7, 9]  # 每行立方體的數量
+
+# 在每一行擺放立方體
+for row in range(rows):
+    # 計算每行的起始 x 位置，讓其對稱
+    start_row_x = start_x - (cubes_in_row[row] - 1) * spacing / 2
+    
+    for col in range(cubes_in_row[row]):
+        # 計算每個立方體的位置
+        x_position = start_row_x + col * spacing
+        y_position = start_y + row * spacing
+        
+        # 建立立方體
+        cube_handle = sim.createPrimitiveShape(sim.primitiveshape_cuboid, [cube_size, cube_size, cube_size], 0)
+        sim.setObjectPosition(cube_handle, -1, [x_position, y_position, cube_size / 2])  # z 方向上升到立方體的中心
+
+# 完成立方體的擺放
+print("立方體已成功擺放!")
+
+# 設定主迴圈
+while True:
+    # 在這裡可以進行其他模擬操作
+    time.sleep(0.1)  # 確保循環不會過快
+
+    if keyboard.is_pressed('q'):
+        # 可以按下 q 鍵跳出重複執行迴圈
+        break
+
+# 終止模擬
+sim.stopSimulation()
+</pre>
+<p></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
