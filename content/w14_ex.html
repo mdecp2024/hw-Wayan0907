@@ -141,74 +141,10 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW 3 Exam << <a href='HW 3 Exam.html'>Previous</a> <a href='w8.html'>Next</a> >> w8<br /><h1>w7</h1>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">def print_pyramid(高度):</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    對於範圍（高度）內的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        # 計算空格和星號的數量</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        空格 = ' ' * (高度 - i - 1)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        星星 = '*' * (2 * i + 1)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        列印（空格+星號）</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-#設定金字塔的高度</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-金字塔高度 = 6</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-print_pyramid（金字塔高度）</span></span></pre>
-<p><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;pythonw -u "help_range.py" </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">          * </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">        *** </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">      ***** </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">    ******* </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">  ********* </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">*********** </span></span><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;退出代碼: 0</span></span></p>
-<p><br/><br/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">w8</span></span></p>
-<p><img alt="" height="471" src="./../images/螢幕擷取畫面 2024-10-16 120825.png" width="800"/></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">從 coppeliasim_zmqremoteapi_client 導入 RemoteAPIClient</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-導入時間</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-進口鍵盤</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-#利用zmqRemoteAPI以23000對場景伺服器進行連線</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-客戶端 = RemoteAPIClient('[::1]', 23000)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 以 getObject 方法取得場景對象</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-sim = client.getObject('sim')</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-box = sim.getObject('/box')</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 啟動模擬</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-sim.startSimulation()</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 設定立方體的尺寸和初始位置</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-立方體大小 = 0.2 # 20 厘米</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-開始_x = 0</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-起始y = 0</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-間距 = 0.5 # 50 cm 之間的距離（可依需求調整）</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 收納立方體的行數和每行的數量</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-rows = 5 # 從第 1 行到第 5 行</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-cubes_in_row = [1, 3, 5, 7, 9] # 每行立方體的數量</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 在每一行存放立方體</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-對於範圍內的行（行）：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    # 計算每行的起始x位置，使其最便宜</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    start_row_x = start_x - (cubes_in_row[行] - 1) * 間距 / 2</span></span><span></span>
-    <span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    對於範圍內的列（cubes_in_row[row]）：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        # 計算每個立方體的位置</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        x_position = start_row_x + col * 間距</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        y_position = start_y + 行 * 間距</span></span><span></span>
-        <span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        # 建立立方體</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        cube_handle = sim.createPrimitiveShape(sim.primitiveshape_cuboid, [cube_size,cube_size,cube_size], 0)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        sim.setObjectPosition(cube_handle, -1, [x_position, y_position,cube_size / 2]) # z 方向上升到立方體的中心</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 完成正方體的收納盒</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-print("立方體已成功出貨！")</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-#設定主迴圈</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-而真實：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    # 在這裡可以進行其他模擬操作</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    time.sleep(0.1) #確保迴圈不會太快</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-    如果鍵盤.is_pressed('q'):</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        # 可以按q鍵跳出重複執行迴圈</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-        休息</span></span><span></span>
-<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-# 終止模擬</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
-sim.stopSimulation()</span></span><span></span>
-</pre>
+    <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2<br /><h1>w14_ex</h1>
 <p></p>
-<br />HW 3 Exam << <a href='HW 3 Exam.html'>Previous</a> <a href='w8.html'>Next</a> >> w8</div>
+<p><span>請根據兩個圓繪圖所圍成的</span><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5eca62565d509668d731720f1994e127/raw/0e370b2ad0c429ab4c8905244022c27cfca8cfba/two_cicle_fill_ex1.py">區域</a><span>(目前圍成三個區域, 但若圓心移動可能彼此獨立)進行不同顏色著色, 條件是當各圓半徑與圓心座標變動時, 程式只需輸入兩個圓的圓心座標與半徑, 就可以完成各區域的著色任務.</span></p>
+<p><a href="/get_page/Brython?src=https://gist.githubusercontent.com/Wayan0907/a93aa2dc29cc17dee4b47a21abeb9650/raw/e7f5e59fd2a42421a0975ee183d7318bb29fc5a3/w14.py">多圓的重疊</a></p><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
