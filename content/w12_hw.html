@@ -304,6 +304,28 @@ print(planets)
 planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
 # 輸出最終的行星列表
 print(planets)</pre>
+<p><span>範例程式:房子</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+print(house)  # 原始列表
+  
+# 刪除 "dining room"
+del house[1]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+  
+# 刪除 "garden" 和 "balcony"
+del house[4:6]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "terrace"]
+  
+# 刪除 "kitchen", "bedroom", 和 "terrace"
+del house[::2]
+print(house)  # ["living room", "bathoom"]
+  
+# 刪除整個清單
+del house
+try:
+    print(house)  # 此處會觸發 NameError
+except NameError:
+    print("The variable 'house' no longer exists.")</pre>
 <p></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
