@@ -326,7 +326,37 @@ try:
     print(house)  # 此處會觸發 NameError
 except NameError:
     print("The variable 'house' no longer exists.")</pre>
-<p></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p>第八題:My friends' favorite dishes(<span>我朋友最喜歡的菜</span>)</p>
+<p><span>說明:for ... in range() (循環控制語句)</span></p>
+<p data-pm-slice="1 1 []"><span>範例程式:我朋友最喜歡的菜</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
+  
+# 定義喜愛的食物列表
+dishes  = ["sushi", "burgers", "tacos", "pizza"]  
+  
+# 打印朋友的名字
+print("My friends' names are:")  
+print(friends)  
+  
+# 使用 for 迴圈遍歷朋友列表，打印索引和對應的朋友名字
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("friend: " + friends[index])  # 打印對應的朋友名字
+  
+# 打印喜愛的食物
+print("Their favorite dishes are:")  
+print(dishes)  
+  
+# 使用 for 迴圈遍歷食物列表，打印索引和對應的食物
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("dish: " + dishes[index])  # 打印對應的食物
+  
+# 使用 for 迴圈，同時列出朋友和他們喜愛的食物
+for index in range(0, 4):  
+    print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p data-pm-slice="1 1 []"></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
