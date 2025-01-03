@@ -211,6 +211,59 @@ todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dis
 print (todays_menu) #列印今日菜單
 todays_menu.insert(side_dish_index, "fries") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
 print (todays_menu) #列印今日菜單</pre>
+<p>第六題:Traveling around the world(環遊世界)</p>
+<p><span>說明:</span>List slicing(串列切片)</p>
+<p><span>範例程式:城市</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個名為 cities 的串列，包含五個城市名稱
+cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+  
+# 列印整個串列
+print (cities)  # ['San Diego', 'Prague', 'Cape Town', 'Tokyo', 'Melbourne']
+  
+# 列印索引為 1 的元素
+print (cities[1])  # 'Prague'
+  
+# 列印從索引 1 到 3 的元素（不包含索引 4）
+print (cities[1:4])  # ['Prague', 'Cape Town', 'Tokyo']
+  
+# 列印從索引 1 到 3 的元素，間隔為 2
+print (cities[1:4:2])  # ['Prague', 'Tokyo']
+  
+# 列印從索引 0 到 2 的元素（不包含索引 3）
+print (cities[0:3])  # ['San Diego', 'Prague', 'Cape Town']
+  
+# 列印從開始到索引 2 的元素（不包含索引 3）
+print (cities[:3])  # ['San Diego', 'Prague', 'Cape Town']
+  
+# 列印從索引 2 到 4 的元素（不包含索引 5）
+print (cities[2:5])  # ['Cape Town', 'Tokyo', 'Melbourne']
+  
+# 列印從索引 2 到最後的元素
+print (cities[2:])  # ['Cape Town', 'Tokyo', 'Melbourne']
+  
+# 列印從索引 0 到 4 的元素，每隔 2 個元素
+print (cities[0:5:2])  # ['San Diego', 'Cape Town', 'Melbourne']
+  
+# 列印從頭到尾的元素，每隔 2 個元素
+print (cities[::2])  # ['San Diego', 'Cape Town', 'Melbourne']
+  
+# 列印索引為 4 的元素
+print (cities[4])  # 'Melbourne'
+  
+# 列印最後一個元素（索引 -1）
+print (cities[-1])  # 'Melbourne'
+  
+# 列印從索引 -4 到 -2 的元素（不包含索引 -1）
+print (cities[-4:-1])  # ['Prague', 'Cape Town', 'Tokyo']
+  
+# 列印從索引 3 到 1，反向取值
+print (cities[3:0:-1])  # ['Tokyo', 'Cape Town', 'Prague']
+  
+# 列印從索引 -2 到 -4，反向取值
+print (cities[-2:-5:-1])  # ['Tokyo', 'Cape Town', 'Prague']
+  
+# 列印整個串列，反轉順序
+print (cities[::-1])  # ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
 <p></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
