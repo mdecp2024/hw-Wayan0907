@@ -178,7 +178,30 @@ if wanted_book in programming_books:
     print ("Yes, we sell it!")
 else:
     print ("Sorry, we don't sell that book")</pre>
-<p><span> </span></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p><span> </span></p>
+<p>第四題:<em>append()和remove()</em></p>
+<p>說明:<span>使用append()進行加入接著使用remove()移除清單內無需購買之物品</span></p>
+<p><span>範例程式:購物清單</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"] #在shopping_list變數裡面有3個字串
+print (shopping_list) #列印shopping_list變數
+new_item = input("What else do I have to buy?") #設定一個變數為new_item其等於input指令回傳之數值
+ 
+if new_item in shopping_list:  #如果 "變數new_item(想買的物品)"回傳之值 在"shopping_list(購物清單)"字串當中就執行以下程式
+    print (new_item + " is/are already in the shopping list") #列印 "new_item變數的數值"+字串is/are already in the shopping list
+    print (shopping_list) #列印shopping_list字串
+else:                    #反之
+    shopping_list.append(new_item) #購物清單.加入(想要購買的物品)    如果不在購物清單內那就將未在字串中物品加入購物清單
+    print (shopping_list) #列印購物清單
+#以下是移除物品的程式
+item_to_remove = input("What do I have to remove?") #item_to_remove(想要移除的物品)
+ 
+if item_to_remove in shopping_list: #如果 想要移除的物品在購物清單中 那就執行
+    shopping_list.remove(item_to_remove) #把購物清單.移除(想要移除的物品)
+    print (shopping_list) #列印購物清單
+else:                     #反之
+    print (item_to_remove + " is/are not in the list") #列印 想要移除的物品+is/are not in the list(不在清單中)
+    print (shopping_list) #列印購物清單</pre>
+<p></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
