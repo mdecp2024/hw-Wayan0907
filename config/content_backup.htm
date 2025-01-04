@@ -216,6 +216,8 @@ print (cities[-2:-5:-1])  # ['Tokyo', 'Cape Town', 'Prague']
 print (cities[::-1])  # ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
 <p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
 <p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
+<p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
+<p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
 <p><span>範例程式:感官</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
 senses = ["eyes", "nose", "ears", "tongue", "skin"]
@@ -276,6 +278,62 @@ try:
     print(house)  # 此處會觸發 NameError
 except NameError:
     print("The variable 'house' no longer exists.")</pre>
+<p>第八題:My friends' favorite dishes(<span>我朋友最喜歡的菜</span>)</p>
+<p><span>說明:for ... in range() (循環控制語句)</span></p>
+<p data-pm-slice="1 1 []"><span>範例程式:我朋友最喜歡的菜</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
+  
+# 定義喜愛的食物列表
+dishes  = ["sushi", "burgers", "tacos", "pizza"]  
+  
+# 打印朋友的名字
+print("My friends' names are:")  
+print(friends)  
+  
+# 使用 for 迴圈遍歷朋友列表，打印索引和對應的朋友名字
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("friend: " + friends[index])  # 打印對應的朋友名字
+  
+# 打印喜愛的食物
+print("Their favorite dishes are:")  
+print(dishes)  
+  
+# 使用 for 迴圈遍歷食物列表，打印索引和對應的食物
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("dish: " + dishes[index])  # 打印對應的食物
+  
+# 使用 for 迴圈，同時列出朋友和他們喜愛的食物
+for index in range(0, 4):  
+    print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p><span>第九題:</span><span>At the zoo(</span><span>在動物園)</span></p>
+<p><span>說明:For loop with if... == ... / else</span>(在 for 迴圈中 逐一遍歷（迭代） 元素，並使用 if...else 條件判斷)</p>
+<p><span>範例程式:動物</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 動物清單
+animals = ["giraffe", "penguin", "dolphin"]
+print(animals)  # 輸出清單
+  
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):  # 使用 len() 動態取得清單長度
+    print("-- Beginning of loop --")
+    # 輸出每個元素及其位置
+    print("The element in position " + str(i) + " is " + animals[i])
+  
+# 想要看到的動物
+wanted_to_see = "penguin"
+  
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):
+    # 如果當前的動物是想看的那個
+    if animals[i] == wanted_to_see:
+        # 輸出特別訊息
+        print("I saw a " + animals[i] + " and I really wanted to see it!")
+    # 如果當前的動物不是特別想看的那個
+    else:
+        # 輸出一般訊息
+        print("I saw a " + animals[i])</pre>
 <p></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>

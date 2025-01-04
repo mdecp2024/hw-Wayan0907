@@ -266,6 +266,8 @@ print (cities[-2:-5:-1])  # ['Tokyo', 'Cape Town', 'Prague']
 print (cities[::-1])  # ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
 <p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
 <p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
+<p>第七題:Senses, planets, and a houseng(感官、行星、房子)</p>
+<p><span>說明:Changing, adding, and removing list elements using slicing(透過切片操作來更改、添加和刪除串列中的元素)</span></p>
 <p><span>範例程式:感官</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
 senses = ["eyes", "nose", "ears", "tongue", "skin"]
@@ -356,7 +358,74 @@ for index in range(0, 4):
 # 使用 for 迴圈，同時列出朋友和他們喜愛的食物
 for index in range(0, 4):  
     print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
-<p data-pm-slice="1 1 []"></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p><span>第九題:</span><span>At the zoo(</span><span>在動物園)</span></p>
+<p><span>說明:For loop with if... == ... / else</span>(在 for 迴圈中 逐一遍歷（迭代） 元素，並使用 if...else 條件判斷)</p>
+<p><span>範例程式:動物</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 動物清單
+animals = ["giraffe", "penguin", "dolphin"]
+print(animals)  # 輸出清單
+  
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):  # 使用 len() 動態取得清單長度
+    print("-- Beginning of loop --")
+    # 輸出每個元素及其位置
+    print("The element in position " + str(i) + " is " + animals[i])
+  
+# 想要看到的動物
+wanted_to_see = "penguin"
+  
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):
+    # 如果當前的動物是想看的那個
+    if animals[i] == wanted_to_see:
+        # 輸出特別訊息
+        print("I saw a " + animals[i] + " and I really wanted to see it!")
+    # 如果當前的動物不是特別想看的那個
+    else:
+        # 輸出一般訊息
+        print("I saw a " + animals[i])</pre>
+<p><span>第十題</span><span>:Where are my gloves?</span><span>(</span><span>我的手套在哪裡？</span><span>)</span></p>
+<p><span>說明:For loop for searching(在 for 迴圈中 逐一遍歷（迭代） 元素，並使用 if...else 條件判斷))</span></p>
+<p><span>範例程式:物品位置</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
+print(accessories)
+  
+# 逐一列出元素及其位置
+for i in range(len(accessories)):
+    print(f"The element {accessories[i]} is in position {i}")
+  
+# 列出長度等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) == 6:
+        print(f"The element {accessories[i]} is in position {i} and it has 6 characters")
+  
+# 列出長度小於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) &lt; 6:
+        print(f"The element {accessories[i]} is in position {i} and it has less than 6 characters")
+  
+# 定義閾值：6，列出長度大於 6 的元素
+n_of_characters = 6
+for i in range(len(accessories)):
+    if len(accessories[i]) &gt; n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has more than {n_of_characters} characters")
+  
+# 定義閾值：6，列出長度不等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) != n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has a number of characters different from {n_of_characters}")
+  
+# 定義閾值：2，列出位置小於或等於 2 的元素
+position = 2
+for i in range(len(accessories)):
+    if i &lt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is less than or equal to {position}")
+  
+# 定義閾值：2，列出位置大於或等於 2 的元素
+for i in range(len(accessories)):
+    if i &gt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is at least {position}")</pre>
+<p></p><br />w15 << <a href='w15.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
