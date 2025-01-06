@@ -144,21 +144,23 @@ img.add_border {
     <div id="tipue_search_content">HW 4 << <a href='HW 4.html'>Previous</a> <a href='Final Report.html'>Next</a> >> Final Report<br /><h1>HW 4 Exam</h1>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 4 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<br/><br/><br/>w16_exam3
+<p><br/><br/></p>
+<p></p><br/><br/>w16_Exam3
+<p><a href="https://mdecp2024.github.io/hw-Wayan0907/content/Brython.html?src=https://gist.githubusercontent.com/Wayan0907/06c701af0f6bb76e4ccd4c3cc840b2bf/raw/fc767dc48accd1d1f17355ec633d1228f4c17703/w1.py">exam3</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 import math
-  
-  
+ 
+ 
 def draw_maze(angle_degrees):
     # 創建畫布
     canvas = html.CANVAS(width=1200, height=1200)
     brython_div = doc["brython_div1"]
     brython_div &lt;= canvas
-  
+ 
     # 取得繪圖上下文
     ctx = canvas.getContext("2d")
-  
+ 
     # 設置參數
     pixel_scale = 100
     offset_x = 32 * 2
@@ -166,7 +168,7 @@ def draw_maze(angle_degrees):
     # 向右移動的偏移量
     move_right_offset = 200
     angle_radians = math.radians(angle_degrees)
-  
+ 
     # 定義迷宮線條
     lines = [
         ((0, 0), (2, 0)),
@@ -186,26 +188,26 @@ def draw_maze(angle_degrees):
         ((0, 5), (2, 5)),
         ((0, 0), (0, 5)),
     ]
-  
+ 
     # 旋轉並繪製迷宮線條
     ctx.strokeStyle = "blue"
     ctx.lineWidth = 2
     for line in lines:
         start = line[0]
         end = line[1]
-  
+ 
         # 旋轉起點座標
         start_x_rotated = start[0] * pixel_scale * math.cos(angle_radians) - start[1] * pixel_scale * math.sin(
             angle_radians)
         start_y_rotated = start[0] * pixel_scale * math.sin(angle_radians) + start[1] * pixel_scale * math.cos(
             angle_radians)
-  
+ 
         # 旋轉終點座標
         end_x_rotated = end[0] * pixel_scale * math.cos(angle_radians) - end[1] * pixel_scale * math.sin(
             angle_radians)
         end_y_rotated = end[0] * pixel_scale * math.sin(angle_radians) + end[1] * pixel_scale * math.cos(
             angle_radians)
-  
+ 
         ctx.beginPath()
         ctx.moveTo(
             offset_x + move_right_offset + start_x_rotated,
@@ -216,12 +218,12 @@ def draw_maze(angle_degrees):
             offset_y + end_y_rotated
         )
         ctx.stroke()
-  
+ 
     return ctx, offset_x + move_right_offset, offset_y, pixel_scale
-  
-  
+ 
+ 
 def find_path():
-     
+    
     path = [
         ((2.5, 0), (2.5, 0.5)),
         ((2.5, 0.5), (4.5, 0.5)),
@@ -240,8 +242,8 @@ def find_path():
         ((2.5, 4.5), (2.5, 5))
     ]
     return path
-  
-  
+ 
+ 
 def draw_path(ctx, offset_x, offset_y, angle_degrees, path, pixel_scale):
     angle_radians = math.radians(angle_degrees)
     ctx.strokeStyle = "red"
@@ -249,19 +251,19 @@ def draw_path(ctx, offset_x, offset_y, angle_degrees, path, pixel_scale):
     for line in path:
         start = line[0]
         end = line[1]
-  
+ 
         # 旋轉起點座標
         start_x_rotated = start[0] * pixel_scale * math.cos(angle_radians) - start[1] * pixel_scale * math.sin(
             angle_radians)
         start_y_rotated = start[0] * pixel_scale * math.sin(angle_radians) + start[1] * pixel_scale * math.cos(
             angle_radians)
-  
+ 
         # 旋轉終點座標
         end_x_rotated = end[0] * pixel_scale * math.cos(angle_radians) - end[1] * pixel_scale * math.sin(
             angle_radians)
         end_y_rotated = end[0] * pixel_scale * math.sin(angle_radians) + end[1] * pixel_scale * math.cos(
             angle_radians)
-  
+ 
         ctx.beginPath()
         ctx.moveTo(
             offset_x + start_x_rotated,
@@ -272,8 +274,8 @@ def draw_path(ctx, offset_x, offset_y, angle_degrees, path, pixel_scale):
             offset_y + end_y_rotated
         )
         ctx.stroke()
-  
-  
+ 
+ 
 def label_coordinate(ctx, offset_x, offset_y, text_angle_degrees):
     text_angle_radians = math.radians(text_angle_degrees)
     ctx.font = "18px Arial"
@@ -289,8 +291,8 @@ def label_coordinate(ctx, offset_x, offset_y, text_angle_degrees):
     ctx.rotate(text_angle_radians)
     ctx.fillText("(32, 21)", 10, - 15)
     ctx.restore()
-  
-  
+ 
+ 
 if __name__ == "__main__":
     # 調整迷宮角度，這裡設定為30度，可依需求修改
     maze_angle = 0
